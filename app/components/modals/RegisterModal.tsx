@@ -38,15 +38,16 @@ const RegisterMoal = () => {
     const onSubmit: SubmitHandler<FieldValues> = (data) => {
         setIsLoading(true);
         axios.post('/api/register', data)
-            .then(() => {
-                registerModal.onClose();        
-            })
-            .catch((error) => {
-                toast.error('Something Went Wrong');
-            })
-            .finally(() => {
-                setIsLoading(false);
-            });
+        .then(() => {
+            registerModal.onClose();        
+        })
+        .catch((error) => {
+            console.log(error)
+            toast.error('Something Went Wrong');
+        })
+        .finally(() => {
+            setIsLoading(false);
+        });
     }
 
     const bodyContent = (

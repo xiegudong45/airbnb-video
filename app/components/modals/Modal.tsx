@@ -129,13 +129,11 @@ const Modal: React.FC<ModalProps> = ({
                                     flex
                                     items-center
                                     p-6
-                                    rounded-t
                                     justify-center
                                     relative
                                     border-b-[1px]
                                 "
                             >
-                               
                                 <button
                                     onClick={handleClose}
                                     className="
